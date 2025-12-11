@@ -21,9 +21,11 @@ export default function HomePage() {
             <h1>Lista film</h1>
             {list.map(movie => {
                 return (
-                    <div key={movie.id} className="card">
+                    <div key={movie.id} className="d-flex my-3 border">
+
                         <img src={`http://localhost:3000/movies_images/${movie.image}`} className="card-img-top" alt="" />
-                        <div className="card-body">
+
+                        <div className="mx-3">
                             <h5 className="card-title">{movie.title}</h5>
                             <p className="card-text">{movie.abstract}</p>
                             <a href="#" className="btn btn-primary">Movie details</a>
