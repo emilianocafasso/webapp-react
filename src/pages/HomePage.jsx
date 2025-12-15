@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 
 export default function HomePage() {
 
@@ -28,7 +29,10 @@ export default function HomePage() {
                         <div className="mx-3">
                             <h5 className="card-title">{movie.title}</h5>
                             <p className="card-text">{movie.abstract}</p>
-                            <a href="#" className="btn btn-primary">Movie details</a>
+                            <Link
+                                to={`/movie/${movie.id}`}
+                                className="btn btn-primary">Movie details
+                            </Link>
                         </div>
                     </div>
                 )
